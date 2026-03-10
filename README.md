@@ -319,9 +319,21 @@ To ensure visibility for "Blocked" malware events, I modified local_rules.xml in
   ]
 }
 ```
-</details>
+</details><br>
+<br>
 
+### Automated Incident Response
 
+I configured a Wazuh integration to send all Level 10 alerts to the osTicket API. This completed the automated workflow: the moment the attack was blocked by the firewall, a critical ticket was opened in the helpdesk for analyst review.
 
+<img width="3840" height="2064" alt="Screenshot 2026-03-09 211338" src="https://github.com/user-attachments/assets/96162208-a274-4250-9190-c04ab2a64b2e" />
 
+<img width="3840" height="2064" alt="Screenshot 2026-03-09 154556" src="https://github.com/user-attachments/assets/5060ae8f-0f54-4ade-9628-53a5158443ab" />
 
+## Key Results & Takeaways
+
+- Validated Defense-in-Depth: Proved that the network layer could successfully kill an attack even if endpoint defenses were bypassed.
+
+- Automation Efficiency: Demonstrated how to reduce MTTA (Mean Time to Acknowledge) by automating the ticket creation process.
+
+- Technical Troubleshooting: Successfully debugged JSON pathing discrepancies between raw logs and SIEM decoders to ensure accurate alerting.
