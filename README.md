@@ -39,21 +39,26 @@ I enabled IPS Mode on the OPNsense WAN interface and configured the system to ut
 
 I generated a malicious payload using msfvenom and established a listener on the Kali machine. Upon execution on the Windows 11 target:
 
-- Suricata successfully identified the Meterpreter construct (SID: 2025644).
+- Suricata successfully identified the Meterpreter construct (SID: 2025644).<br>
+<br>
 
-<img width="3840" height="2064" alt="Screenshot 2026-03-09 141653" src="https://github.com/user-attachments/assets/b5101887-b261-4196-a57d-7d6f64a413b9" />
+<img width="3840" height="2064" alt="Screenshot 2026-03-09 141653" src="https://github.com/user-attachments/assets/b5101887-b261-4196-a57d-7d6f64a413b9" /><br>
+<br>
 
-- The IPS Engine immediately dropped the packets, preventing the reverse shell from being established.
+- The IPS Engine immediately dropped the packets, preventing the reverse shell from being established.<br>
+<br>
 
-<img width="3840" height="2064" alt="Screenshot 2026-03-09 141557" src="https://github.com/user-attachments/assets/e4fc15f1-5fb3-4e3e-8148-cbd10e954d28" />
+<img width="3840" height="2064" alt="Screenshot 2026-03-09 141557" src="https://github.com/user-attachments/assets/e4fc15f1-5fb3-4e3e-8148-cbd10e954d28" /><br>
+<br>
 
-- Verification: I confirmed the "Action: Blocked" status in both the OPNsense eve.json logs and the Wazuh dashboard.
+- Verification: I confirmed the "Action: Blocked" status in both the OPNsense eve.json logs and the Wazuh dashboard.<br>
+<br>
 
 <details>
   <summary>Click to expand JSON alert Log</summary>
 
   ```json
-  {
+{
   "_index": "wazuh-alerts-4.x-2026.03.09",
   "_id": "QbHy05wB-f1ZaGWEwhTD",
   "_version": 1,
@@ -169,4 +174,8 @@ I generated a malicious payload using msfvenom and established a listener on the
     1773082422676
   ]
 }
+```
+</details>
+
+
 
