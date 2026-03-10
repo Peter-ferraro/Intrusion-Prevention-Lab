@@ -49,8 +49,6 @@ I generated a malicious payload using msfvenom and established a listener on the
 
 - Verification: I confirmed the "Action: Blocked" status in both the OPNsense eve.json logs and the Wazuh dashboard.
 
-<img width="3840" height="2064" alt="Screenshot 2026-03-09 143614" src="https://github.com/user-attachments/assets/913311b4-34f5-4f60-8835-2f61c9752114" />
-<img width="3840" height="2064" alt="Screenshot 2026-03-09 143628" src="https://github.com/user-attachments/assets/e42461ea-4a9b-42bb-ac98-cc4c105a13ea" />
 <details>
   <summary>Click to expand JSON alert Log</summary>
 
