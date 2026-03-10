@@ -179,7 +179,7 @@ I generated a malicious payload using msfvenom and established a listener on the
 
 ### SIEM Tuning & Rule Escalation
 
-To ensure visibility for "Blocked" malware events, I modified local_rules.xml in the Wazuh Manager. I created a child rule (SID: 100005) that triggers specifically when Suricata logs a "Blocked" action, escalating the alert level from a default 3 to a critical 12.<br>
+To ensure visibility for "Blocked" malware events, I modified local_rules.xml in the Wazuh Manager. I created a child rule (SID: 100005) that triggers specifically when Suricata logs a "Blocked" action, escalating the alert level from a default 3 to a critical 12. (Just as an added note, I did remove rule 100050 after I took this screenshot. It was a rule I was using to test the ticketing workflow.)<br>
 <br>
 
 <img width="3840" height="2064" alt="Screenshot 2026-03-09 152644" src="https://github.com/user-attachments/assets/c336761b-0daa-4b06-a567-e6b81fe0d633" /><br>
