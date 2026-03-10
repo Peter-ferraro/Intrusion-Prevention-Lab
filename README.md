@@ -190,10 +190,138 @@ To ensure visibility for "Blocked" malware events, I modified local_rules.xml in
 
   ```json
   {
-    "_index": "wazuh-alerts-4.x-2026.03.09",
-    "_id": "QbHy05wB-f1ZaGWEwhTD",
-    ... (your JSON data) ...
-  }
+  "_index": "wazuh-alerts-4.x-2026.03.09",
+  "_id": "RLEW1JwB-f1ZaGWEZxfe",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.168.56.1",
+      "name": "OPNsense-FW",
+      "id": "003"
+    },
+    "manager": {
+      "name": "Security-Monitor2"
+    },
+    "data": {
+      "app_proto": "failed",
+      "ip_v": "4",
+      "in_iface": "le1",
+      "src_ip": "192.168.12.10",
+      "src_port": "4444",
+      "event_type": "alert",
+      "alert": {
+        "severity": "1",
+        "signature_id": "2025644",
+        "rev": "1",
+        "metadata": {
+          "affected_product": [
+            "Any"
+          ],
+          "attack_target": [
+            "Client_and_Server"
+          ],
+          "updated_at": [
+            "2019_07_26"
+          ],
+          "confidence": [
+            "Medium"
+          ],
+          "created_at": [
+            "2016_05_16"
+          ],
+          "tag": [
+            "Metasploit"
+          ],
+          "signature_severity": [
+            "Critical"
+          ],
+          "deployment": [
+            "Internal",
+            "Datacenter",
+            "Internet",
+            "Perimeter"
+          ]
+        },
+        "gid": "1",
+        "signature": "ET MALWARE Possible Metasploit Payload Common Construct Bind_API (from server)",
+        "action": "blocked",
+        "category": "A Network Trojan was detected"
+      },
+      "flow_id": "1977526354312642.000000",
+      "dest_ip": "192.168.56.12",
+      "proto": "TCP",
+      "dest_port": "62031",
+      "pkt_src": "wire/pcap",
+      "flow": {
+        "src_ip": "192.168.56.12",
+        "src_port": "62031",
+        "pkts_toserver": "140",
+        "dest_ip": "192.168.12.10",
+        "start": "2026-03-09T15:32:39.067212-0400",
+        "bytes_toclient": "437796",
+        "bytes_toserver": "7998",
+        "pkts_toclient": "293",
+        "dest_port": "4444"
+      },
+      "timestamp": "2026-03-09T15:32:39.111163-0400",
+      "direction": "to_client"
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": true,
+      "level": 12,
+      "description": "CRITICAL: Suricata IPS intercepted and BLOCKED a A Network Trojan was detected from 192.168.12.10",
+      "groups": [
+        "ids",
+        "suricata",
+        "local"
+      ],
+      "mitre": {
+        "technique": [
+          "Application Layer Protocol"
+        ],
+        "id": [
+          "T1071"
+        ],
+        "tactic": [
+          "Command and Control"
+        ]
+      },
+      "id": "100005"
+    },
+    "location": "/var/log/suricata/eve.json",
+    "decoder": {
+      "name": "json"
+    },
+    "id": "1773084759.1667722",
+    "full_log": "{\"timestamp\":\"2026-03-09T15:32:39.111163-0400\",\"flow_id\":1977526354312642,\"in_iface\":\"le1\",\"event_type\":\"alert\",\"src_ip\":\"192.168.12.10\",\"src_port\":4444,\"dest_ip\":\"192.168.56.12\",\"dest_port\":62031,\"proto\":\"TCP\",\"ip_v\":4,\"pkt_src\":\"wire/pcap\",\"alert\":{\"action\":\"blocked\",\"gid\":1,\"signature_id\":2025644,\"rev\":1,\"signature\":\"ET MALWARE Possible Metasploit Payload Common Construct Bind_API (from server)\",\"category\":\"A Network Trojan was detected\",\"severity\":1,\"metadata\":{\"affected_product\":[\"Any\"],\"attack_target\":[\"Client_and_Server\"],\"confidence\":[\"Medium\"],\"created_at\":[\"2016_05_16\"],\"deployment\":[\"Internal\",\"Datacenter\",\"Internet\",\"Perimeter\"],\"signature_severity\":[\"Critical\"],\"tag\":[\"Metasploit\"],\"updated_at\":[\"2019_07_26\"]}},\"app_proto\":\"failed\",\"direction\":\"to_client\",\"flow\":{\"pkts_toserver\":140,\"pkts_toclient\":293,\"bytes_toserver\":7998,\"bytes_toclient\":437796,\"start\":\"2026-03-09T15:32:39.067212-0400\",\"src_ip\":\"192.168.56.12\",\"dest_ip\":\"192.168.12.10\",\"src_port\":62031,\"dest_port\":4444}}",
+    "timestamp": "2026-03-09T15:32:39.923-0400"
+  },
+  "fields": {
+    "data.timestamp": [
+      "2026-03-09T19:32:39.111Z"
+    ],
+    "timestamp": [
+      "2026-03-09T19:32:39.923Z"
+    ]
+  },
+  "highlight": {
+    "agent.name": [
+      "@opensearch-dashboards-highlighted-field@OPNsense-FW@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1773084759923
+  ]
+}
+```
+</details>
+
+
 
 
 
